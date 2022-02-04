@@ -28,12 +28,16 @@ jobs:
 
       - name: Go mod download
         run: go mod download
+        working-directory: src/
 
       - name: Go Vet
         run: go vet ./...
+        working-directory: src/
 
       - name: Go Build
         run: go build .
+        working-directory: src/
 
       - name: Go Test
         run: go test ./...
+        working-directory: src/
